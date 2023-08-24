@@ -1,0 +1,4 @@
+langchain==0.0.272
+chainlit==0.6.2
+cohere==4.21
+faiss-cpu==1.7.4
