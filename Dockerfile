@@ -8,4 +8,9 @@ COPY --chown=user . $HOME/app
 COPY ./requirements.txt ~/app/requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
+
+USER root
+RUN chmod 777 ~/app/*
+USER user
+
 CMD ["chainlit", "run", "app.py", "--port", "7860"]
