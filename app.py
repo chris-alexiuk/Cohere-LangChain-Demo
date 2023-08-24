@@ -109,5 +109,4 @@ async def init():
 async def main(message):
     chain = cl.user_session.get("chain")
     res = chain(message)
-    print(res)
     await cl.Message(content=res["output"]).send()
